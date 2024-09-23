@@ -10,7 +10,7 @@ const useGetAppliedJobs = () => {
     useEffect(() => {
         const GetAllJobs = async () => {
             try {
-                const res = await fetch(`https://jobportel.onrender.com/api/v1/job/get`, {
+                const res = await fetch(`https://jobportel.onrender.com/api/v1/application/get`, {
 
                     credentials: 'include',
 

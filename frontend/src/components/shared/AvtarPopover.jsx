@@ -112,17 +112,17 @@ export default function BasicPopover() {
                                                 <PersonOutlineOutlinedIcon />
                                                 <Button href="#text-buttons"><Link to='/profile'>View Profile</Link></Button>
                                             </div>
-                                            <div className='flex w-fit items-center gap-2 cursor-pointer'>
+                                            <div className='flex w-fit sm:hidden items-center gap-2 cursor-pointer'>
 
                                                 <HomeIcon />
                                                 <Link to='/'><Button >Home</Button></Link>
                                             </div>
-                                            <div className='flex w-fit items-center gap-2 cursor-pointer'>
+                                            <div className='flex sm:hidden w-fit items-center gap-2 cursor-pointer'>
 
                                                 <WorkIcon />
                                                 <Link to='/jobs'><Button >Jobs</Button></Link>
                                             </div>
-                                            <div className='flex w-fit items-center gap-2 cursor-pointer'>
+                                            <div className='flex w-fit sm:hidden items-center gap-2 cursor-pointer'>
 
                                                 <TravelExploreIcon />
                                                 <Link to='/browse'><Button >Browse</Button></Link>
