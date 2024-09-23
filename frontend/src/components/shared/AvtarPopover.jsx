@@ -16,6 +16,7 @@ import { USER_AUTH } from '../../../../backend/utils/constant';
 import WorkIcon from '@mui/icons-material/Work';
 import HomeIcon from '@mui/icons-material/Home';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
+import BusinessIcon from '@mui/icons-material/Business';
 
 
 
@@ -106,24 +107,31 @@ export default function BasicPopover() {
                                     </>
                                 ) : (
                                     <>
-                                        <div>
-                                            <PersonOutlineOutlinedIcon />
-                                            <Button href="#text-buttons"><Link to='/profile'>View Profile</Link></Button>
-                                        </div>
-                                        <div className='flex w-fit items-center gap-2 cursor-pointer'>
+                                        <div className='flex-col '>
+                                            <div>
+                                                <PersonOutlineOutlinedIcon />
+                                                <Button href="#text-buttons"><Link to='/profile'>View Profile</Link></Button>
+                                            </div>
+                                            <div className='flex w-fit items-center gap-2 cursor-pointer'>
 
-                                            <HomeIcon />
-                                            <Link to='/'><Button >Home</Button></Link>
-                                        </div>
-                                        <div className='flex w-fit items-center gap-2 cursor-pointer'>
+                                                <HomeIcon />
+                                                <Link to='/'><Button >Home</Button></Link>
+                                            </div>
+                                            <div className='flex w-fit items-center gap-2 cursor-pointer'>
 
-                                            <WorkIcon />
-                                            <Link to='/jobs'><Button >Jobs</Button></Link>
-                                        </div>
-                                        <div className='flex w-fit items-center gap-2 cursor-pointer'>
+                                                <WorkIcon />
+                                                <Link to='/jobs'><Button >Jobs</Button></Link>
+                                            </div>
+                                            <div className='flex w-fit items-center gap-2 cursor-pointer'>
 
-                                            <TravelExploreIcon />
-                                            <Link to='/browse'><Button >Browse</Button></Link>
+                                                <TravelExploreIcon />
+                                                <Link to='/browse'><Button >Browse</Button></Link>
+                                            </div>
+                                            <div className='flex w-fit items-center gap-2 cursor-pointer'>
+
+                                                <LogoutOutlinedIcon />
+                                                <Button onClick={logoutHandler} href="#text-buttons">Logout</Button>
+                                            </div>
                                         </div>
                                     </>
                                 )
@@ -139,9 +147,20 @@ export default function BasicPopover() {
                     {
                         user && user.role == 'recruiter' ? (
                             <>
+                                <div className=' flex-col'>
+                                    <div className='flex w-fit items-center gap-2 cursor-pointer'>
 
-                                <Link to='/admin/companies'><Button className='cursor-pointer'>Companies</Button></Link>
-                                <Link to='/admin/jobs'><Button className='cursor-pointer'>Jobs</Button></Link>
+                                        <BusinessIcon />
+                                        <Link to='/admin/companies'><Button className='cursor-pointer'>Companies</Button></Link>
+                                    </div>
+                                    <div className='flex w-fit items-center gap-2 cursor-pointer'>
+
+                                        <WorkIcon />
+                                        <Link to='/admin/jobs'><Button className='cursor-pointer'>Job</Button></Link>
+                                    </div>
+                                </div>
+
+
                             </>
                         ) : (
                             <div className='flex items-center gap-2'>
