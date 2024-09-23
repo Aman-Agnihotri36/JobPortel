@@ -86,7 +86,7 @@ function CompanySetup() {
     return (
         <div>
             <Navbar />
-            <div className="min-h-screen flex   sm:items-center justify-center ">  {/* Background color change */}
+            <div className="min-h-screen flex  mt-10  sm:items-center justify-center ">  {/* Background color change */}
                 <div className="bg-white p-10 rounded shadow-md w-full max-w-4xl">
                     <div className='flex gap-10  justify-start items-center'>
                         <button onClick={() => navigate('/admin/companies/create')} className='bg-gray-100 text-gray-600 rounded-md px-3 py-2 '><KeyboardBackspaceIcon />Back</button>

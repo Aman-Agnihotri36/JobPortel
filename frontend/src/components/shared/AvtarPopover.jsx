@@ -98,38 +98,41 @@ export default function BasicPopover() {
                             {
                                 user && user.role == 'recruiter' ? (
                                     <>
+                                        <div className='flex w-fit items-center gap-2 cursor-pointer'>
 
+                                            <LogoutOutlinedIcon />
+                                            <Button onClick={logoutHandler} href="#text-buttons">Logout</Button>
+                                        </div>
                                     </>
                                 ) : (
                                     <>
-                                        <PersonOutlineOutlinedIcon />
-                                        <Button href="#text-buttons"><Link to='/profile'>View Profile</Link></Button>
+                                        <div>
+                                            <PersonOutlineOutlinedIcon />
+                                            <Button href="#text-buttons"><Link to='/profile'>View Profile</Link></Button>
+                                        </div>
+                                        <div className='flex w-fit items-center gap-2 cursor-pointer'>
+
+                                            <HomeIcon />
+                                            <Link to='/'><Button >Home</Button></Link>
+                                        </div>
+                                        <div className='flex w-fit items-center gap-2 cursor-pointer'>
+
+                                            <WorkIcon />
+                                            <Link to='/jobs'><Button >Jobs</Button></Link>
+                                        </div>
+                                        <div className='flex w-fit items-center gap-2 cursor-pointer'>
+
+                                            <TravelExploreIcon />
+                                            <Link to='/browse'><Button >Browse</Button></Link>
+                                        </div>
                                     </>
                                 )
                             }
 
                         </div>
 
-                        <div className='flex w-fit items-center gap-2 cursor-pointer'>
 
-                            <HomeIcon />
-                            <Link to='/'><Button >Home</Button></Link>
-                        </div>
-                        <div className='flex w-fit items-center gap-2 cursor-pointer'>
 
-                            <WorkIcon />
-                            <Link to='/jobs'><Button >Jobs</Button></Link>
-                        </div>
-                        <div className='flex w-fit items-center gap-2 cursor-pointer'>
-
-                            <TravelExploreIcon />
-                            <Link to='/browse'><Button >Browse</Button></Link>
-                        </div>
-                        <div className='flex w-fit items-center gap-2 cursor-pointer'>
-
-                            <LogoutOutlinedIcon />
-                            <Button onClick={logoutHandler} href="#text-buttons">Logout</Button>
-                        </div>
 
 
                     </div>
@@ -137,8 +140,8 @@ export default function BasicPopover() {
                         user && user.role == 'recruiter' ? (
                             <>
 
-                                <Link to='/admin/companies'><li className='cursor-pointer'><Button >Companies</Button></li></Link>
-                                <Link to='/admin/jobs'><li className='cursor-pointer'><Button >Jobs</Button></li></Link>
+                                <Link to='/admin/companies'><Button className='cursor-pointer'>Companies</Button></Link>
+                                <Link to='/admin/jobs'><Button className='cursor-pointer'>Jobs</Button></Link>
                             </>
                         ) : (
                             <div className='flex items-center gap-2'>

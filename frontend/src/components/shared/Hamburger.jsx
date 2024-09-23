@@ -5,6 +5,9 @@ import { UserOutlined } from '@ant-design/icons';
 import Button from '@mui/material/Button';
 import CustomizedButtons from './Button';
 import { Avatar } from 'antd';
+import WorkIcon from '@mui/icons-material/Work';
+import HomeIcon from '@mui/icons-material/Home';
+import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 
 const SimplePopover = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -44,21 +47,21 @@ const SimplePopover = () => {
                             </>
                         ) : (
                             <>
-                                <Link to='/'>
-                                    <li className='cursor-pointer hover:bg-gray-100 px-4 py-2 rounded-lg w-full text-center'>
-                                        Home
-                                    </li>
-                                </Link>
-                                <Link to='/jobs'>
-                                    <li className='cursor-pointer hover:bg-gray-100 px-4 py-2 rounded-lg w-full text-center'>
-                                        Jobs
-                                    </li>
-                                </Link>
-                                <Link to='/browse'>
-                                    <li className='cursor-pointer hover:bg-gray-100 px-4 py-2 rounded-lg w-full text-center'>
-                                        Browse
-                                    </li>
-                                </Link>
+                                <div className='flex w-fit items-center gap-2 cursor-pointer'>
+
+                                    <HomeIcon />
+                                    <Link to='/'><Button >Home</Button></Link>
+                                </div>
+                                <div className='flex w-fit items-center gap-2 cursor-pointer'>
+
+                                    <WorkIcon />
+                                    <Link to='/jobs'><Button >Jobs</Button></Link>
+                                </div>
+                                <div className='flex w-fit items-center gap-2 cursor-pointer'>
+
+                                    <TravelExploreIcon />
+                                    <Link to='/browse'><Button >Browse</Button></Link>
+                                </div>
                                 <Link to="/login">
                                     <Button className='bg-[#6A38C2] text-white w-full rounded-lg' variant="contained" size="small">
                                         Login
