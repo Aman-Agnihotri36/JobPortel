@@ -16,7 +16,6 @@ import { USER_AUTH } from '../../../../backend/utils/constant';
 import WorkIcon from '@mui/icons-material/Work';
 import HomeIcon from '@mui/icons-material/Home';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
-import BusinessIcon from '@mui/icons-material/Business';
 
 
 
@@ -114,17 +113,17 @@ export default function BasicPopover() {
                         <div className='flex w-fit items-center gap-2 cursor-pointer'>
 
                             <HomeIcon />
-                            <Button onClick={navigate('/')} href="#text-buttons">Home</Button>
+                            <Link to='/'><Button >Home</Button></Link>
                         </div>
                         <div className='flex w-fit items-center gap-2 cursor-pointer'>
 
                             <WorkIcon />
-                            <Button onClick={navigate('/jobs')} href="#text-buttons">Jobs</Button>
+                            <Link to='/jobs'><Button >Jobs</Button></Link>
                         </div>
                         <div className='flex w-fit items-center gap-2 cursor-pointer'>
 
                             <TravelExploreIcon />
-                            <Button onClick={navigate('/browse')} href="#text-buttons">Browse</Button>
+                            <Link to='/browse'><Button >Browse</Button></Link>
                         </div>
                         <div className='flex w-fit items-center gap-2 cursor-pointer'>
 
@@ -137,19 +136,9 @@ export default function BasicPopover() {
                     {
                         user && user.role == 'recruiter' ? (
                             <>
-                                <div className='flex w-fit items-center gap-2 cursor-pointer'>
 
-                                    <BusinessIcon />
-                                    <Button onClick={navigate('/admin/companies')} href="#text-buttons">Companies</Button>
-                                </div>
-
-                                <div className='flex w-fit items-center gap-2 cursor-pointer'>
-
-                                    <WorkIcon />
-                                    <Button onClick={navigate('/admin/jobs')} href="#text-buttons">Jobs</Button>
-                                </div>
-
-
+                                <Link to='/admin/companies'><li className='cursor-pointer'><Button >Companies</Button></li></Link>
+                                <Link to='/admin/jobs'><li className='cursor-pointer'><Button >Jobs</Button></li></Link>
                             </>
                         ) : (
                             <div className='flex items-center gap-2'>
