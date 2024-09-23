@@ -9,7 +9,7 @@ const useGetAllAdminJobs = () => {
     useEffect(() => {
         const fetchAllAdminJobs = async () => {
             try {
-                const res = await fetch(`${GET_JOB}/getadmin`, {
+                const res = await fetch(`https://jobportel.onrender.com/getadmin`, {
                     credentials: 'include'
                 })
                 let data = await res.json()

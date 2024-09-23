@@ -12,7 +12,7 @@ dotenv.config({})
 const app = express()
 
 const corsOptions = {
-    origin: 'http://localhost:5173',  // Replace with your frontend's URL
+    origin: 'https://jobportel.onrender.com',  // Replace with your frontend's URL
     credentials: true,  // Allow credentials (cookies, authentication headers)
     methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Specify the allowed methods
     allowedHeaders: ['Content-Type', 'Authorization']  // Allow specific headers

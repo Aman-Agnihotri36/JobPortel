@@ -60,7 +60,7 @@ export default function SlotPropsLogIn() {
             dispatch(authSliceActions.setLoading(true))
 
 
-            const item = await fetch(`${USER_AUTH}/login`, {
+            const item = await fetch(`https://jobportel.onrender.com/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

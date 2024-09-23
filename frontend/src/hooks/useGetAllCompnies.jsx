@@ -15,7 +15,7 @@ const useGetAllCompany = () => {
         const fetchAllCompany = async () => {
             try {
 
-                const res = await fetch(`${GET_COMPANY}/get`, {
+                const res = await fetch(`https://jobportel.onrender.com/get`, {
                     credentials: 'include'
                 })
                 let data = await res.json()

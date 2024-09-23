@@ -13,7 +13,7 @@ const useGetAllJobs = () => {
     useEffect(() => {
         const fetchAllJobs = async () => {
             try {
-                const res = await fetch(`${GET_JOB}/get?keyword=${searchedQuery}`, {
+                const res = await fetch(`https://jobportel.onrender.com/get?keyword=${searchedQuery}`, {
                     credentials: 'include'
                 })
                 let data = await res.json()
