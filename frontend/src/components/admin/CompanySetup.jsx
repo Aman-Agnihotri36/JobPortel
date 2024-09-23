@@ -48,7 +48,7 @@ function CompanySetup() {
 
         try {
 
-            const item = await fetch(`http://localhost:8000/api/v1/company/update/${params.id}`, {
+            const item = await fetch(`https://jobportel.onrender.com/api/v1/company/update/${params.id}`, {
                 method: 'POST',
                 credentials: 'include',
                 body: formData

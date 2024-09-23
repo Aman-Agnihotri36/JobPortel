@@ -12,7 +12,7 @@ function CreateCompany() {
 
     const registerNewCompany = async () => {
         try {
-            const res = await fetch(`http://localhost:8000/api/v1/company/register`, {
+            const res = await fetch(`https://jobportel.onrender.com/api/v1/company/register`, {
                 credentials: 'include',
                 method: 'POST',
                 headers: {

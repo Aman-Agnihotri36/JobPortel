@@ -36,7 +36,7 @@ export default function SlotPropsSignIn() {
         // const data = Object.fromEntries(formData.entries());
         try {
             dispatch(authSliceActions.setLoading(true))
-            const item = await fetch(`https://jobportel.onrender.com/register`, {
+            const item = await fetch(`https://jobportel.onrender.com/api/v1/user/register`, {
                 method: 'POST',
 
 

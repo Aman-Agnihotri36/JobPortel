@@ -10,7 +10,7 @@ const useGetCompanyById = (companyId) => {
     useEffect(() => {
         const fetchSingleCompany = async () => {
             try {
-                const res = await fetch(`https://jobportel.onrender.com/get/${companyId}`, {
+                const res = await fetch(`https://jobportel.onrender.com/api/v1/company/get/${companyId}`, {
                     credentials: 'include'
                 })
                 let data = await res.json()

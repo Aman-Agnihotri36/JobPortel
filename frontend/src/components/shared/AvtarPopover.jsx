@@ -27,7 +27,7 @@ export default function BasicPopover() {
     const logoutHandler = async () => {
         try {
 
-            const item = await fetch(`https://jobportel.onrender.com/logout`, {
+            const item = await fetch(`https://jobportel.onrender.com/api/v1/user/logout`, {
                 method: 'GET',
                 credentials: 'include'
             })

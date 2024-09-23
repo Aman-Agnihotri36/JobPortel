@@ -20,7 +20,7 @@ function Applicants() {
     useEffect(() => {
         const fetchAllApplicants = async () => {
             try {
-                const res = await fetch(`${APPLI}/${params.id}/applicants`, {
+                const res = await fetch(`https://jobportel.onrender.com/api/v1/application/${params.id}/applicants`, {
                     credentials: 'include'
                 })
 

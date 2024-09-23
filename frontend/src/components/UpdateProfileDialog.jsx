@@ -41,7 +41,7 @@ function UpdateProfileDialog() {
 
         try {
 
-            const item = await fetch(`https://jobportel.onrender.com/updateProfile`, {
+            const item = await fetch(`https://jobportel.onrender.com/api/v1/user/updateProfile`, {
                 method: 'POST',
 
 

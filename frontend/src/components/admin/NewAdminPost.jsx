@@ -56,7 +56,7 @@ function NewAdminPost() {
 
         try {
 
-            const item = await fetch(`http://localhost:8000/api/v1/job/post`, {
+            const item = await fetch(`https://jobportel.onrender.com/api/v1/job/post`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

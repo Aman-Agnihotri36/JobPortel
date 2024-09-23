@@ -9,7 +9,7 @@ const useGetSingleJob = (jobId) => {
     useEffect(() => {
         const fetchSingleJob = async () => {
             try {
-                const res = await fetch(`https://jobportel.onrender.com/get/${jobId}`, {
+                const res = await fetch(`https://jobportel.onrender.com/api/v1/job/get/${jobId}`, {
                     credentials: 'include'
                 })
                 let data = await res.json()
