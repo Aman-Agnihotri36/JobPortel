@@ -49,7 +49,7 @@ function JobDescription() {
 
     const applyJobHandler = async () => {
         try {
-            const res = await fetch(`http://localhost:8000/api/v1/application/apply/${jobId}`, {
+            const res = await fetch(`https://jobportel.onrender.com/api/v1/application/apply/${jobId}`, {
                 credentials: 'include'
             })
 
