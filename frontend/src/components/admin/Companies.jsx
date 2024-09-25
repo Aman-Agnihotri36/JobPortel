@@ -31,7 +31,7 @@ function Companies() {
                 </div>
                 <CompaniesTable />
             </div>
-            <Footer />
+
         </div>
     )
 }

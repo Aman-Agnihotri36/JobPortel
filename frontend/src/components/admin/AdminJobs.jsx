@@ -33,7 +33,7 @@ function AdminJobs() {
                 </div>
                 <AdminJobsTable />
             </div>
-            <Footer />
+
         </div>
     )
 }
