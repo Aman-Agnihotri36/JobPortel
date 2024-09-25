@@ -45,7 +45,7 @@ function Applicants() {
                 <h1 className='text-xl font-bold my-5'>Applicants ({applicants?.length})</h1>
                 <ApplicantTable />
             </div>
-            <Footer />
+
         </div>
     )
 }
