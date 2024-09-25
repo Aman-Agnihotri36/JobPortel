@@ -27,26 +27,26 @@ function AdminJobsTable() {
     }, [allAdminJobs, searchAdminJobsByText])
 
     return (
-        <div className="container mx-auto my-2">
+        <div className="container mx-auto my-2 , overflow-x-scroll">
             <table className="min-w-full bg-white border-collapse">
 
                 <thead>
                     <tr className="border-b-2 border-gray-300">
-                        <th className="sm:px-6 sm:py-4 text-left">Company Name</th>
-                        <th className="sm:px-6 sm:py-4 text-left">Role</th>
-                        <th className="sm:px-6 sm:py-4 text-left">Date</th>
-                        <th className="sm:px-6 sm:py-4 text-left">Action</th>
+                        <th className="sm:px-6 py-4 text-left">Company Name</th>
+                        <th className="sm:px-6 py-4 text-left">Role</th>
+                        <th className="sm:px-6 py-4 text-left">Date</th>
+                        <th className="sm:px-6 py-4 text-left">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {filterAdminJobs.length <= 0 ? <span className='relative left-72 top-10' >You haven't registered any Job yet</span> : (
+                    {filterAdminJobs.length <= 0 ? <span className='relative left-72 top-10 text-center' >You haven't registered any Job yet</span> : (
                         <>
                             {filterAdminJobs.map((job) => (
                                 <tr key={job._id} className="border-b border-gray-300">
-                                    <td className="sm:px-6 sm:py-4 text-left">{job?.company?.name}</td>
-                                    <td className="sm:px-6 sm:py-4 text-left">{job?.title}</td>
-                                    <td className="sm:px-6 sm:py-4 text-left">  {job?.createdAt.split("T")[0]}</td>
-                                    <td className="sm:px-6 sm:py-4 text-left">
+                                    <td className="sm:px-6 py-4 text-left">{job?.company?.name}</td>
+                                    <td className="sm:px-6 py-4 text-left">{job?.title}</td>
+                                    <td className="sm:px-6 py-4 text-left">  {job?.createdAt.split("T")[0]}</td>
+                                    <td className="sm:px-6 py-4 text-left">
                                         <BasicPopover2 JobId={job._id} People={people} Application={Application} Company={job?._id} />
                                     </td>
                                 </tr>

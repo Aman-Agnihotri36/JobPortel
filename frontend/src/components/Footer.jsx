@@ -9,12 +9,12 @@ const Footer = () => {
             <div className="container mx-auto text-center">
                 {/* Text Logo */}
                 <div className="mb-4">
-                    <h1 className="text-2xl font-bold">JobHunt</h1>
+                    <h1 className="text-2xl font-bold">JobPortal</h1>
                 </div>
 
                 {/* Copyright Text */}
                 <p className="text-gray-900 mb-4">
-                    © 2024 YourWebsite. All rights reserved.
+                    © 2024 JobPortal . All rights reserved.
                 </p>
 
                 {/* Social Icons */}
