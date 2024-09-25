@@ -13,9 +13,9 @@ function AppliedJobTable() {
                 <thead>
                     <tr className="border-b-2 border-gray-300">
 
-                        <th className="sm:px-6  py-4 text-left">Job Role</th>
-                        <th className="sm:px-6  py-4 text-left">Company</th>
-                        <th className="sm:px-6  py-4 text-left">Status</th>
+                        <th className="sm:px-6 px-2  py-4 text-left">Job Role</th>
+                        <th className="sm:px-6 px-2  py-4 text-left">Company</th>
+                        <th className="sm:px-6  px-2 py-4 text-left">Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -23,9 +23,9 @@ function AppliedJobTable() {
                         !appliedJobsByStudent ? <span className='text-center'>You have not applied any Job yet</span> : appliedJobsByStudent.map((appliedJob) => (
                             <tr key={appliedJob._id} className="border-b border-gray-300">
 
-                                <td className="sm:px-6  py-4 text-left">{appliedJob?.job?.title}</td>
-                                <td className="sm:px-6  py-4 text-left">{appliedJob?.job?.company?.name}</td>
-                                <td className="sm:px-6  py-4 text-left">
+                                <td className="sm:px-6 px-2  py-4 text-left">{appliedJob?.job?.title}</td>
+                                <td className="sm:px-6 px-2  py-4 text-left">{appliedJob?.job?.company?.name}</td>
+                                <td className="sm:px-6 px-2  py-4 text-left">
                                     <button className={`rounded-md p-2 py-1 text-white  ${appliedJob?.status == 'rejected' ? 'bg-red-400' : appliedJob.status == 'pending' ? 'bg-gray-400' : 'bg-green-400'}`}>{appliedJob.status} </button>
                                 </td>
                             </tr>
