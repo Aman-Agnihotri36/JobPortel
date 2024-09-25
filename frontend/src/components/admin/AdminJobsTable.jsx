@@ -32,10 +32,10 @@ function AdminJobsTable() {
 
                 <thead>
                     <tr className="border-b-2 border-gray-300">
-                        <th className="px-6 py-4 text-left">Company Name</th>
-                        <th className="px-6 py-4 text-left">Role</th>
-                        <th className="px-6 py-4 text-left">Date</th>
-                        <th className="px-6 py-4 text-left">Action</th>
+                        <th className="sm:px-6 sm:py-4 text-left">Company Name</th>
+                        <th className="sm:px-6 sm:py-4 text-left">Role</th>
+                        <th className="sm:px-6 sm:py-4 text-left">Date</th>
+                        <th className="sm:px-6 sm:py-4 text-left">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -43,10 +43,10 @@ function AdminJobsTable() {
                         <>
                             {filterAdminJobs.map((job) => (
                                 <tr key={job._id} className="border-b border-gray-300">
-                                    <td className="px-6 py-4 text-left">{job?.company?.name}</td>
-                                    <td className="px-6 py-4 text-left">{job?.title}</td>
-                                    <td className="px-6 py-4 text-left">  {job?.createdAt.split("T")[0]}</td>
-                                    <td className="px-6 py-4 text-left">
+                                    <td className="sm:px-6 sm:py-4 text-left">{job?.company?.name}</td>
+                                    <td className="sm:px-6 sm:py-4 text-left">{job?.title}</td>
+                                    <td className="sm:px-6 sm:py-4 text-left">  {job?.createdAt.split("T")[0]}</td>
+                                    <td className="sm:px-6 sm:py-4 text-left">
                                         <BasicPopover2 JobId={job._id} People={people} Application={Application} Company={job?._id} />
                                     </td>
                                 </tr>
